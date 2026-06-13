@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="BaseCollections/BaseCollections.csproj" />
   <Project Path="BaseInterfaces/BaseInterfaces.csproj" />
+  <Project Path="GenericCollections/GenericCollections.csproj" />
   <Project Path="Indexator/Indexator.csproj" />
 </Solution>

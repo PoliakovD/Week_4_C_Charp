@@ -46,23 +46,26 @@ class Program
         //     Console.WriteLine(day);
         // }
 
-        var student = new Student
-        {
-            FirstName = "John",
-            LastName = "Miller",
-            BirthDate = new DateTime(1997, 3, 12),
-            StudentCard = new StudentCard (189356,"AB")
-        };
+        // var student = new Student
+        // {
+        //     FirstName = "John",
+        //     LastName = "Miller",
+        //     BirthDate = new DateTime(1997, 3, 12),
+        //     StudentCard = new StudentCard (189356,"AB")
+        // };
+        //
+        // var student2 = student.Clone() as Student;
+        // Console.WriteLine(student);
+        // Console.WriteLine(student2);
+        //
+        // student2.FirstName = "Mike";
+        // student2.StudentCard.Number = 1234;
+        //
+        // Console.WriteLine(student);
+        // Console.WriteLine(student2);
 
-        var student2 = student.Clone() as Student;
-        Console.WriteLine(student);
-        Console.WriteLine(student2);
+        var aud = new Auditory();
         
-        student2.FirstName = "Mike";
-        student2.StudentCard.Number = 1234;
-        
-        Console.WriteLine(student);
-        Console.WriteLine(student2);
-
+        foreach(Student student in aud) Console.WriteLine(student);
     }
 }

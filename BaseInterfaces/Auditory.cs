@@ -2,7 +2,7 @@
 
 namespace BaseInterfaces;
 
-public class Auditory: IEnumerable, IEnumerable<Student>
+public class Auditory
 {
     Student[] students =
     {
@@ -45,15 +45,20 @@ public class Auditory: IEnumerable, IEnumerable<Student>
         Array.Sort(students, comparer);
     }
 
-    IEnumerator<Student> IEnumerable<Student>.GetEnumerator()
+    public IEnumerator<Student> GetEnumerator()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Вызван IEnumerable<Student> GetEnumerator");
+        for (int i = 0; i < students.Length; i++)
+        {
+           yield return students[i];
+        }
     }
 
-    public IEnumerator GetEnumerator()
-    {
-        return students.GetEnumerator();
-    }
+    // public IEnumerator GetEnumerator()
+    // {
+    //     Console.WriteLine("Вызван IEnumerator GetEnumerator");
+    //     return students.GetEnumerator();
+    // }
 }
 
 public class NameCoparer : IComparer

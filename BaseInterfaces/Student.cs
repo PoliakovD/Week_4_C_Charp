@@ -13,6 +13,8 @@ public class Student : IComparable, ICloneable
         {
             return BirthDate.CompareTo((obj as Student).BirthDate);
         }
+
+        
         throw new ArgumentException("Object is not a Student");
     }
     public override string ToString() 
@@ -25,5 +27,11 @@ public class Student : IComparable, ICloneable
         newStudent.StudentCard = new StudentCard(StudentCard.Number, StudentCard.Series);
         
         return newStudent;
+    }
+
+    public override int GetHashCode()
+    {
+        return ToString().GetHashCode();
+         
     }
 }
